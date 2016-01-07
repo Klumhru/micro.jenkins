@@ -1,0 +1,14 @@
+consumes:
+- application/com.icelandairlabs.jenkins.v2+json
+definitions: {}
+info:
+  description: A jenkins mirroring service for Dashboard use
+  title: Jenkins rest service
+  version: 0.1.0
+paths: {}
+produces:
+- application/com.icelandairlabs.jenkins.v2+json
+schemes:
+- http
+- https
+swagger: "2.0"

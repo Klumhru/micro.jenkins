@@ -1,0 +1,74 @@
+{
+  "consumes": [
+    "application/com.icelandairlabs.jenkins.v2+json"
+  ],
+  "produces": [
+    "application/com.icelandairlabs.jenkins.v2+json"
+  ],
+  "schemes": [
+    "http",
+    "https"
+  ],
+  "swagger": "2.0",
+  "info": {
+    "description": "A jenkins mirroring service for Dashboard use",
+    "title": "Jenkins rest service",
+    "version": "0.1.0"
+  },
+  "paths": {
+    "/api/jenkins/health": {
+      "get": {
+        "responses": {
+          "200": {
+            "description": "OK",
+            "schema": {
+              "$ref": "#/definitions/health"
+            }
+          }
+        }
+      }
+    },
+    "/api/jenkins/jobs": {
+      "get": {
+        "responses": {
+          "200": {
+            "description": "OK",
+            "schema": {
+              "type": "array",
+              "items": {
+                "$ref": "#/definitions/Job"
+              }
+            }
+          }
+        }
+      }
+    }
+  },
+  "definitions": {
+    "Job": {
+      "type": "object",
+      "properties": {
+        "name": {
+          "type": "string"
+        },
+        "url": {
+          "type": "string"
+        },
+        "color": {
+          "type": "string"
+        }
+      }
+    },
+    "health": {
+      "type": "object",
+      "properties": {
+        "status": {
+          "type": "integer"
+        },
+        "error": {
+          "type": "integer"
+        }
+      }
+    }
+  }
+}

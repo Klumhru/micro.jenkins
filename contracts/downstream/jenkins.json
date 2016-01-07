@@ -1,0 +1,55 @@
+{
+  "healthCheck": {
+    "name": "Health check",
+    "description": "Simple health check of resource",
+    "request": {
+      "method": "GET",
+      "url": "/api/jenkins/health"
+    },
+    "response": {
+      "status": 0,
+      "error": null
+    }
+  },
+  "listJobs": {
+    "name": "List Jenkins jobs",
+    "description": "Fetches an array of objects representing jobs in Jenkins",
+    "request": {
+      "method": "GET",
+      "url": "/api/jenkins/jobs"
+    },
+    "response": {
+      "status": 200,
+      "headers": {
+        "content-type": "application/json; charset=utf-8"
+      },
+      "content": [
+        {
+          "name": "Content",
+          "url": "https://deployment.icelandairlabs.com/job/Content/",
+          "color": "blue"
+        },
+        {
+          "name": "Dashboard",
+          "url": "https://deployment.icelandairlabs.com/job/Dashboard/",
+          "color": "blue"
+        },
+        {
+          "name": "Docker",
+          "url": "https://deployment.icelandairlabs.com/job/Docker/",
+          "color": "blue"
+        },
+        {
+          "name": "labs.icelandair.com",
+          "url": "https://deployment.icelandairlabs.com/job/labs.icelandair.com/",
+          "color": "blue"
+        },
+        {
+          "name": "Proxy",
+          "url": "https://deployment.icelandairlabs.com/job/Proxy/",
+          "color": "blue"
+        }
+      ]
+    }
+  }
+}
