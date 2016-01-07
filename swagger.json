@@ -6,18 +6,18 @@
     "application/com.icelandairlabs.jenkins.v2+json"
   ],
   "schemes": [
-    "http",
-    "https"
+    "http"
   ],
   "swagger": "2.0",
   "info": {
     "description": "A jenkins mirroring service for Dashboard use",
-    "title": "Jenkins rest service",
+    "title": "Jenkins API",
     "version": "0.1.0"
   },
   "paths": {
     "/api/jenkins/health": {
       "get": {
+        "operationId": "getServiceHealth",
         "responses": {
           "200": {
             "description": "OK",
@@ -30,6 +30,7 @@
     },
     "/api/jenkins/jobs": {
       "get": {
+        "operationId": "getJobList",
         "responses": {
           "200": {
             "description": "OK",
