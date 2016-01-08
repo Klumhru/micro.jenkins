@@ -17,6 +17,7 @@
   "paths": {
     "/api/jenkins/health": {
       "get": {
+        "tags": ["health"],
         "operationId": "getServiceHealth",
         "responses": {
           "200": {
@@ -30,6 +31,7 @@
     },
     "/api/jenkins/jobs": {
       "get": {
+        "tags": ["job"],
         "operationId": "getJobList",
         "responses": {
           "200": {
